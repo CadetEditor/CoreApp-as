@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="flox.app.events.OperationProgressEvent"/>
+    <classEntry path="flox.app.operations.ReadFileAndDeserializeOperation"/>
+    <classEntry path="flox.app.operations.DeserializeOperation"/>
+    <classEntry path="flox.app.core.serialization.Deserializer"/>
+    <classEntry path="flox.app.events.SerializeProgressEvent"/>
+    <classEntry path="flox.app.core.operations.IUndoableOperation"/>
+    <classEntry path="flox.app.operations.UndoableCompoundOperation"/>
+    <classEntry path="flox.app.operations.CompoundOperation"/>
+    <classEntry path="flox.app.util.AsynchronousUtil"/>
+    <classEntry path="flox.app.operations.AddItemOperation"/>
+    <classEntry path="flox.app.operations.ChangePropertyOperation"/>
+    <classEntry path="flox.app.operations.RemoveItemOperation"/>
+    <classEntry path="flox.app.operations.CloneOperation"/>
+    <classEntry path="flox.app.core.serialization.Serializer"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.LocalFileSystemProvider"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.WriteFileOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.DeleteFileOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.ReadFileOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.GetDirectoryContentsOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.CreateDirectoryOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.LocalFileSystemProviderOperation"/>
+    <classEntry path="flox.app.events.FileSystemErrorCodes"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.DoesFileExistOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.url.URLFileSystemProvider"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.url.ReadFileOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.url.GetDirectoryContentsOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.url.DoesFileExistOperation"/>
+    <classEntry path="flox.app.operations.LoadManifestsOperation"/>
+    <classEntry path="flox.app.operations.LoadManifestOperation"/>
+    <classEntry path="flox.app.controllers.ExternalResourceController"/>
+    <classEntry path="flox.app.resources.ExternalBitmapDataResource"/>
+    <classEntry path="flox.app.resources.ExternalResourceParserFactory"/>
+    <classEntry path="flox.app.util.swfClassExplorer.data.MultiName"/>
+    <classEntry path="flox.app.util.swfClassExplorer.data.ParameterizedQName"/>
+    <classEntry path="flox.app.util.swfClassExplorer.SwfClassExplorer"/>
+    <classEntry path="flox.app.util.swfClassExplorer.data.RecordHeader"/>
+    <classEntry path="flox.app.util.swfClassExplorer.data.AbcQName"/>
+    <classEntry path="flox.app.util.swfClassExplorer.data.AbcNamespace"/>
+    <classEntry path="flox.app.util.swfClassExplorer.AbcExtractor"/>
+    <classEntry path="flox.app.util.swfClassExplorer.Abc"/>
+    <classEntry path="flox.app.util.swfClassExplorer.data.Traits"/>
+    <classEntry path="flox.app.resources.AbstractExternalResource"/>
+    <classEntry path="flox.app.controllers.IExternalResourceParser"/>
+    <classEntry path="flox.app.controllers.DefaultExternalResourceParser"/>
+    <classEntry path="flox.app.core.operations.IOperation"/>
+    <classEntry path="flox.app.core.managers.fileSystemProviders.operations.ITraverseToDirectoryOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.TraverseToDirectoryOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.FileSystemUtil"/>
+    <classEntry path="flox.app.core.managers.fileSystemProviders.operations.ITraverseAllDirectoriesOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.TraverseAllDirectoriesOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.url.TraverseToDirectoryOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.url.TraverseAllDirectoriesOperation"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
