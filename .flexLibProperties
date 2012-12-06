@@ -15,15 +15,7 @@
     <classEntry path="flox.app.operations.RemoveItemOperation"/>
     <classEntry path="flox.app.operations.CloneOperation"/>
     <classEntry path="flox.app.core.serialization.Serializer"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.LocalFileSystemProvider"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.WriteFileOperation"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.DeleteFileOperation"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.ReadFileOperation"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.GetDirectoryContentsOperation"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.CreateDirectoryOperation"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.LocalFileSystemProviderOperation"/>
     <classEntry path="flox.app.events.FileSystemErrorCodes"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.DoesFileExistOperation"/>
     <classEntry path="flox.app.managers.fileSystemProviders.url.URLFileSystemProvider"/>
     <classEntry path="flox.app.managers.fileSystemProviders.url.ReadFileOperation"/>
     <classEntry path="flox.app.managers.fileSystemProviders.url.GetDirectoryContentsOperation"/>
@@ -47,12 +39,21 @@
     <classEntry path="flox.app.controllers.DefaultExternalResourceParser"/>
     <classEntry path="flox.app.core.operations.IOperation"/>
     <classEntry path="flox.app.core.managers.fileSystemProviders.operations.ITraverseToDirectoryOperation"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.TraverseToDirectoryOperation"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.FileSystemUtil"/>
     <classEntry path="flox.app.core.managers.fileSystemProviders.operations.ITraverseAllDirectoriesOperation"/>
-    <classEntry path="flox.app.managers.fileSystemProviders.local.TraverseAllDirectoriesOperation"/>
     <classEntry path="flox.app.managers.fileSystemProviders.url.TraverseToDirectoryOperation"/>
     <classEntry path="flox.app.managers.fileSystemProviders.url.TraverseAllDirectoriesOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.CreateDirectoryOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.WriteFileOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.DeleteFileOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.LocalFileSystemProviderOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.FileSystemUtil"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.LocalFileSystemProvider"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.DoesFileExistOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.GetDirectoryContentsOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.TraverseAllDirectoriesOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.TraverseToDirectoryOperation"/>
+    <classEntry path="flox.app.managers.fileSystemProviders.local.ReadFileOperation"/>
+    <classEntry path="flox.app.core.managers.fileSystemProviders.ILocalFileSystemProvider"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

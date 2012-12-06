@@ -35,7 +35,6 @@ package flox.app.controllers
 	import flox.app.core.managers.fileSystemProviders.IMultiFileSystemProvider;
 	import flox.app.core.managers.fileSystemProviders.operations.ICreateDirectoryOperation;
 	import flox.app.core.managers.fileSystemProviders.operations.IDoesFileExistOperation;
-	import flox.app.core.managers.fileSystemProviders.operations.IGetDirectoryContentsOperation;
 	import flox.app.core.managers.fileSystemProviders.operations.IReadFileOperation;
 	import flox.app.core.managers.fileSystemProviders.operations.ITraverseAllDirectoriesOperation;
 	import flox.app.core.managers.fileSystemProviders.operations.ITraverseToDirectoryOperation;

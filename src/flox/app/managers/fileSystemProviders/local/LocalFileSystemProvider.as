@@ -14,7 +14,7 @@ package flox.app.managers.fileSystemProviders.local
 	import flash.filesystem.*;
 	import flash.utils.ByteArray;
 	
-	import flox.app.core.managers.fileSystemProviders.IFileSystemProvider;
+	import flox.app.core.managers.fileSystemProviders.ILocalFileSystemProvider;
 	import flox.app.core.managers.fileSystemProviders.operations.*;
 	import flox.app.entities.URI;
 	import flox.app.events.FileSystemProviderEvent;
@@ -22,7 +22,7 @@ package flox.app.managers.fileSystemProviders.local
 		
 	[Event( type="flox.app.events.FileSystemProviderEvent", name="operationBegin" )]	
 		
-	public class LocalFileSystemProvider extends EventDispatcher implements IFileSystemProvider
+	public class LocalFileSystemProvider extends EventDispatcher implements ILocalFileSystemProvider
 	{
 		private var _id						:String;
 		private var _label					:String;
