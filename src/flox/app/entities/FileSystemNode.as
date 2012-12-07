@@ -39,6 +39,11 @@ package flox.app.entities
 			return uri.getFilename();
 		}
 		
+		public function get extension():String
+		{
+			return uri.getExtension(true);
+		}
+		
 		public function get uri():URI { return new URI(_path); }		
 				
 		public function set isPopulated(value:Boolean):void

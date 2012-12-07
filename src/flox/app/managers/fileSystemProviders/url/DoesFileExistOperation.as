@@ -41,7 +41,8 @@ package flox.app.managers.fileSystemProviders.url
 			
 			var parent:URI = new URI();
 			parent.copyURI(localURI );
-			parent.chdir("../");
+			//parent.chdir("../");
+			parent  = parent.getParentURI();
 			
 			var getDirectoryContents:GetDirectoryContentsOperation = new GetDirectoryContentsOperation( parent, _fileSystemProvider, _baseURL );
 			getDirectoryContents.addEventListener(OperationProgressEvent.PROGRESS, progressHandler);

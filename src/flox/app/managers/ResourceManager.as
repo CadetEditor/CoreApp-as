@@ -157,8 +157,9 @@ package flox.app.managers
 				if ( resource is IExternalResource ) {
 					var resourceURI:URI = IExternalResource(resource).getUri();
 					var projectAssetsPath:String = uri.path;
-					//TODO: currently only works for nesting one level deep
-					var resourceAssetsPath:String = resourceURI.getParentURI().path;
+					//TODO: currently only works for nesting one level deep //WHY GET PARENT..?
+					//var resourceAssetsPath:String = resourceURI.getParentURI().path;
+					var resourceAssetsPath:String = resourceURI.path;
 					if ( projectAssetsPath == resourceAssetsPath ) {
 						output.push( resource );
 					}
