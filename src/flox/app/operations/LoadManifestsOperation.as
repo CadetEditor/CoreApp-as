@@ -10,25 +10,10 @@
 
 package flox.app.operations
 {
-	import flash.events.ErrorEvent;
-	import flash.events.Event;
-	import flash.events.EventDispatcher;
-	import flash.events.IEventDispatcher;
-	import flash.events.IOErrorEvent;
-	import flash.events.ProgressEvent;
-	import flash.events.SecurityErrorEvent;
-	import flash.net.URLLoader;
-	import flash.net.URLLoaderDataFormat;
-	import flash.net.URLRequest;
-	
 	import flox.app.FloxApp;
-	import flox.app.core.operations.IOperation;
 	import flox.app.core.serialization.Deserializer;
 	import flox.app.core.serialization.Manifest;
 	import flox.app.core.serialization.Serializer;
-	import flox.app.events.OperationProgressEvent;
-	
-	import org.osmf.utils.URL;
 	
 	public class LoadManifestsOperation extends CompoundOperation
 	{

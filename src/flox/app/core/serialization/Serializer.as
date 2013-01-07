@@ -10,9 +10,6 @@
 
 package flox.app.core.serialization
 {
-	import adobe.utils.CustomActions;
-	
-	import flash.events.ErrorEvent;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
 	import flash.utils.Dictionary;
@@ -22,8 +19,6 @@ package flox.app.core.serialization
 	import flash.utils.setInterval;
 	
 	import flox.core.data.ArrayCollection;
-	
-	import mx.resources.ResourceManager;
 	
 	import flox.app.events.SerializeProgressEvent;
 	import flox.app.util.IntrospectionUtil;
@@ -111,12 +106,12 @@ package flox.app.core.serialization
 			if ( working )
 			{
 				throw( new Error( "Cannot perform multiple serializations. Wait for previous serialization to finish before starting another" ) );
-				return;
+				return null;
 			}
 			if ( item == null )
 			{
 				throw( new Error( "Invalid parameter. item must be non-null" ) );
-				return;
+				return null;
 			}
 			
 			executionTime = -1;

@@ -13,14 +13,11 @@ package flox.app.core.serialization
 	import flash.events.ErrorEvent;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
-	import flash.events.ProgressEvent;
 	import flash.utils.Dictionary;
 	import flash.utils.clearInterval;
 	import flash.utils.getDefinitionByName;
 	import flash.utils.getTimer;
 	import flash.utils.setInterval;
-	
-	import mx.core.IFactory;
 	
 	import flox.app.events.SerializeProgressEvent;
 	
