@@ -25,6 +25,7 @@ package flox.app.controllers
 	import flox.app.entities.URI;
 	import flox.app.managers.ResourceManager;
 	import flox.app.resources.ExternalBitmapDataResource;
+	import flox.app.resources.ExternalXMLResource;
 	import flox.app.resources.FactoryResource;
 	import flox.app.resources.IExternalResource;
 	import flox.app.resources.IResource;
@@ -72,6 +73,9 @@ package flox.app.controllers
 					readFileOperation.execute();
 					swfResources = [];
 					return swfResources;
+				case "xml" :
+					resource = new ExternalXMLResource( resourceID, uri );
+					resourceManager.addResource(resource);
 			}
 			
 			return null;

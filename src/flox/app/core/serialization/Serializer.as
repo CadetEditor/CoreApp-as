@@ -217,9 +217,9 @@ package flox.app.core.serialization
 			var len:int = properties.length;
 			for ( var i:int = 0; i < len; i+=3 )
 			{
-				var propertyName:String = properties[i];
-				var propertyAlias:String = properties[i+1];
-				var serializeType:String = properties[i+2];
+				propertyName = properties[i];
+				propertyAlias = properties[i+1];
+				serializeType = properties[i+2];
 				var childValue:* = value[propertyName];
 				buildSerializerTaskList( childValue, value, propertyName, propertyAlias, serializeType );
 			}

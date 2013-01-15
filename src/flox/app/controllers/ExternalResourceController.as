@@ -16,40 +16,27 @@ package flox.app.controllers
 	 * Files being deleted from this folder will have their corresponding IExternalResource removed.
 	 * If the given directory does not exist, the controller will automatically create it.
 	 */
-	
-	import flash.display.BitmapData;
-	import flash.display.DisplayObject;
-	import flash.display.Loader;
-	import flash.display.LoaderInfo;
+
 	import flash.events.ErrorEvent;
 	import flash.events.Event;
 	import flash.events.TimerEvent;
-	import flash.system.ApplicationDomain;
-	import flash.system.LoaderContext;
-	import flash.utils.ByteArray;
 	import flash.utils.Dictionary;
 	import flash.utils.Timer;
 	
 	import flox.app.FloxApp;
-	import flox.app.core.managers.fileSystemProviders.IFileSystemProvider;
 	import flox.app.core.managers.fileSystemProviders.IMultiFileSystemProvider;
 	import flox.app.core.managers.fileSystemProviders.operations.ICreateDirectoryOperation;
 	import flox.app.core.managers.fileSystemProviders.operations.IDoesFileExistOperation;
-	import flox.app.core.managers.fileSystemProviders.operations.IReadFileOperation;
 	import flox.app.core.managers.fileSystemProviders.operations.ITraverseAllDirectoriesOperation;
 	import flox.app.core.managers.fileSystemProviders.operations.ITraverseToDirectoryOperation;
 	import flox.app.entities.FileSystemNode;
 	import flox.app.entities.URI;
 	import flox.app.events.ResourceManagerEvent;
 	import flox.app.managers.ResourceManager;
-	import flox.app.resources.ExternalBitmapDataResource;
 	import flox.app.resources.ExternalResourceParserFactory;
-	import flox.app.resources.FactoryResource;
 	import flox.app.resources.IExternalResource;
 	import flox.app.resources.IFactoryResource;
 	import flox.app.resources.IResource;
-	import flox.app.util.IntrospectionUtil;
-	import flox.app.util.swfClassExplorer.SwfClassExplorer;
 	
 	public class ExternalResourceController
 	{
@@ -101,7 +88,7 @@ package flox.app.controllers
 			
 			// Build a list of IExternalResourceParser factories, and monitor the resource manager for more being added]
 			parserFactories = new Vector.<IResource>();
-			parserFactories.push( new ExternalResourceParserFactory( DefaultExternalResourceParser, "Default external resource parser", ["png", "jpg", "swf"] ) );
+			parserFactories.push( new ExternalResourceParserFactory( DefaultExternalResourceParser, "Default external resource parser", ["png", "jpg", "swf", "xml"] ) );
 			parserFactories = parserFactories.concat(resourceManager.getResourcesOfType(ExternalResourceParserFactory));
 			resourceManager.addEventListener(ResourceManagerEvent.RESOURCE_ADDED, resourceAddedHandler);
 		}

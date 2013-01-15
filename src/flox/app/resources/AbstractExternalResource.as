@@ -12,7 +12,6 @@ package flox.app.resources
 {
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
-	import flash.events.IEventDispatcher;
 	import flash.utils.ByteArray;
 	
 	import flox.app.core.managers.fileSystemProviders.IFileSystemProvider;

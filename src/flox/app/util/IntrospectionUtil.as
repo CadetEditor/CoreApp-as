@@ -53,6 +53,9 @@ package flox.app.util
 		static public function getType( object:Object ):Class
 		{
 			var classPath:String = getClassPath( object );
+			
+			if ( classPath == "null" ) return XML;
+			
 			return Class( getDefinitionByName( classPath ) );
 		}
 		
@@ -172,7 +175,13 @@ package flox.app.util
 			{
 				var description:XML = describeType( obj );
 				var classPath:String = String(description.@name).replace( "::", "." );
-				type = getDefinitionByName( classPath ) as Class;
+				
+				//TODO: XML has a description.@name of "null"?
+				if ( classPath == "null" ) {
+					type = XML;
+				} else {
+					type = getDefinitionByName( classPath ) as Class;
+				}
 			}
 			
 			if ( descriptionCache[type] == null )
