@@ -25,6 +25,7 @@ package flox.app.controllers
 	import flox.app.entities.URI;
 	import flox.app.managers.ResourceManager;
 	import flox.app.resources.ExternalBitmapDataResource;
+	import flox.app.resources.ExternalMP3Resource;
 	import flox.app.resources.ExternalXMLResource;
 	import flox.app.resources.FactoryResource;
 	import flox.app.resources.IExternalResource;
@@ -76,6 +77,11 @@ package flox.app.controllers
 				case "xml" :
 					resource = new ExternalXMLResource( resourceID, uri );
 					resourceManager.addResource(resource);
+					return [resource];
+				case "mp3" :
+					resource = new ExternalMP3Resource( resourceID, uri );
+					resourceManager.addResource(resource);
+					return [resource];
 			}
 			
 			return null;

@@ -88,7 +88,7 @@ package flox.app.controllers
 			
 			// Build a list of IExternalResourceParser factories, and monitor the resource manager for more being added]
 			parserFactories = new Vector.<IResource>();
-			parserFactories.push( new ExternalResourceParserFactory( DefaultExternalResourceParser, "Default external resource parser", ["png", "jpg", "swf", "xml"] ) );
+			parserFactories.push( new ExternalResourceParserFactory( DefaultExternalResourceParser, "Default external resource parser", ["png", "jpg", "swf", "xml", "mp3"] ) );
 			parserFactories = parserFactories.concat(resourceManager.getResourcesOfType(ExternalResourceParserFactory));
 			resourceManager.addEventListener(ResourceManagerEvent.RESOURCE_ADDED, resourceAddedHandler);
 		}

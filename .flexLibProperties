@@ -2,6 +2,7 @@
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="flox.app.resources.ExternalXMLResource"/>
+    <classEntry path="flox.app.resources.ExternalMP3Resource"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

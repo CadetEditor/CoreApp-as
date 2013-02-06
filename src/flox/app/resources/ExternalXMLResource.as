@@ -1,6 +1,5 @@
 package flox.app.resources
 {
-	import flash.display.Loader;
 	import flash.events.Event;
 	import flash.utils.ByteArray;
 	
