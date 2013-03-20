@@ -30,7 +30,7 @@ package flox.app.dataStructures
 		 * Grabs a instance of the supplied type from the pool and returns it.
 		 * If an existing instance cannot be found, then it simply returns a new instance.
 		 * 
-		 * IMPORTANT: Bear in mind that instances returned from this method arn't 'fresh'. For example,
+		 * IMPORTANT: Bear in mind that instances returned from this method aren't 'fresh'. For example,
 		 * if a flasg.geom.Point instance was returned to the pool via returnInstance() - it's x and y
 		 * properties are probably not their default zero, unlike they would be if created from scratch.
 		 * @param type

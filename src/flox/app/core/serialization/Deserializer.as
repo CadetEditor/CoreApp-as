@@ -130,6 +130,7 @@ package flox.app.core.serialization
 		
 		private function update():void
 		{
+			// Comment out this try/catch to throw specific errors.
 			try
 			{
 				var start:int = getTimer();

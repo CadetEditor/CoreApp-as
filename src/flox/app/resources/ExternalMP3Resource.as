@@ -53,14 +53,6 @@ package flox.app.resources
 		
 		override protected function parseBytes(bytes:ByteArray):void
 		{
-/*			sound = Sound( bytes.readUTFBytes( bytes.length ) );
-			isLoading = false;
-			isLoaded = true;
-			dispatchEvent( new Event( Event.COMPLETE ) );
-		}
-		
-		protected function loadBytes(mp3:ByteArray):void {
-*/
 			// Wrap the MP3 with a SWF
 			var swf:ByteArray = createSWFFromMP3(bytes);
 			// Load the SWF with Loader::loadBytes()
@@ -77,7 +69,7 @@ package flox.app.resources
 			// Instantiate the sound class
 			sound = new SoundClass() as Sound;
 			// Play the sound
-			sound.play();
+			//sound.play();
 			
 			isLoading = false;
 			isLoaded = true;
