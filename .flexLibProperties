@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
-    <classEntry path="flox.app.resources.ExternalXMLResource"/>
-    <classEntry path="flox.app.resources.ExternalMP3Resource"/>
-    <classEntry path="flox.app.core.serialization.Serializer"/>
-    <classEntry path="flox.app.core.serialization.SerializerTask"/>
+    <classEntry path="core.app.resources.ExternalXMLResource"/>
+    <classEntry path="core.app.resources.ExternalMP3Resource"/>
+    <classEntry path="core.app.core.serialization.Serializer"/>
+    <classEntry path="core.app.core.serialization.SerializerTask"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
