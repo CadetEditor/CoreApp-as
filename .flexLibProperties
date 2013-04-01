@@ -5,6 +5,12 @@
     <classEntry path="core.app.resources.ExternalMP3Resource"/>
     <classEntry path="core.app.core.serialization.Serializer"/>
     <classEntry path="core.app.core.serialization.SerializerTask"/>
+    <classEntry path="core.app.util.ArrayUtil"/>
+    <classEntry path="core.app.core.validators.IValidator"/>
+    <classEntry path="core.app.validators.CollectionValidator"/>
+    <classEntry path="core.app.validators.AbstractValidator"/>
+    <classEntry path="core.app.events.ValidatorEvent"/>
+    <classEntry path="core.app.events.CollectionValidatorEvent"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
