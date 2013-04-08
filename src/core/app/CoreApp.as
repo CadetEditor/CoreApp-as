@@ -18,6 +18,7 @@ package core.app
 
 	public class CoreApp
 	{
+		static private var _initialised					:Boolean;
 		static private var _fileSystemProvider			:IMultiFileSystemProvider;
 		static private var _resourceManager				:ResourceManager;
 		
@@ -33,12 +34,16 @@ package core.app
 		
 		static public function get externalResourceControllers():Dictionary { return _externalResourceControllers; }
 		
-		public static function init():void
+		static public function get initialised():Boolean { return _initialised; }
+		
+		static public function init():void
 		{
 			_fileSystemProvider 	= new MultiFileSystemProvider();
 			_resourceManager 		= new ResourceManager(_fileSystemProvider);
 			
 			_externalResourceControllers = new Dictionary();
+			
+			_initialised			= true;
 		}
 		
 		

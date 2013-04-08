@@ -10,7 +10,6 @@
 
 package core.app.core.serialization
 {
-	import flash.utils.Dictionary;
 	import flash.utils.getDefinitionByName;
 	
 	import core.app.resources.IResource;

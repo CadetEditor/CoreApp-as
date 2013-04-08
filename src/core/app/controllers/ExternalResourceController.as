@@ -225,7 +225,7 @@ package core.app.controllers
 			}
 			var resourceID:String = path;
 			var extension:String = uri.getExtension(true).toLowerCase();
-			//trace("createResourceForURI "+resourceID);
+			trace("createResourceForURI "+resourceID);
 			
 			// If the resource exists in the resourceManager, but a reference hasn't been stored to it
 			// yet in the resourcesByPath table, add it there.

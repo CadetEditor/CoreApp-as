@@ -11,6 +11,7 @@
     <classEntry path="core.app.validators.AbstractValidator"/>
     <classEntry path="core.app.events.ValidatorEvent"/>
     <classEntry path="core.app.events.CollectionValidatorEvent"/>
+    <classEntry path="core.app.operations.SerializeOperation"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

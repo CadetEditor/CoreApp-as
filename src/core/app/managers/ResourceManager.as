@@ -14,9 +14,7 @@ package core.app.managers
 	import flash.events.EventDispatcher;
 	import flash.utils.Dictionary;
 	
-	import core.app.CoreApp;
 	import core.app.core.managers.fileSystemProviders.IFileSystemProvider;
-	import core.app.core.serialization.ResourceSerializerPlugin;
 	import core.app.entities.URI;
 	import core.app.events.ResourceManagerEvent;
 	import core.app.resources.IExternalResource;
