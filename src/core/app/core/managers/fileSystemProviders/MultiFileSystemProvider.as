@@ -25,12 +25,9 @@ package core.app.core.managers.fileSystemProviders
 	import core.app.core.managers.fileSystemProviders.operations.ITraverseAllDirectoriesOperation;
 	import core.app.core.managers.fileSystemProviders.operations.ITraverseToDirectoryOperation;
 	import core.app.core.managers.fileSystemProviders.operations.IWriteFileOperation;
-	import core.app.core.operations.IAsynchronousOperation;
-	import core.app.core.operations.IOperation;
 	import core.app.entities.FileSystemNode;
 	import core.app.entities.URI;
 	import core.app.events.FileSystemProviderEvent;
-	import core.app.util.StringUtil;
 	
 	public class MultiFileSystemProvider extends EventDispatcher implements IMultiFileSystemProvider
 	{

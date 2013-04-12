@@ -19,6 +19,7 @@ package core.app.controllers
 
 	import flash.events.ErrorEvent;
 	import flash.events.Event;
+	import flash.events.EventDispatcher;
 	import flash.events.TimerEvent;
 	import flash.utils.Dictionary;
 	import flash.utils.Timer;
@@ -38,7 +39,7 @@ package core.app.controllers
 	import core.app.resources.IFactoryResource;
 	import core.app.resources.IResource;
 	
-	public class ExternalResourceController
+	public class ExternalResourceController extends EventDispatcher
 	{
 		private var _resourceManager	:ResourceManager;
 		private var _assetsURI			:URI;
@@ -183,6 +184,8 @@ package core.app.controllers
 				}
 				resourcesByPath[resourcePath] = null;
 			}
+			
+			dispatchEvent( new Event(Event.COMPLETE) );
 		}
 		
 		private function parseNode( node:FileSystemNode, currentTable:Object ):void
