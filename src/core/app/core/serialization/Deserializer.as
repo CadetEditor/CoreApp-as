@@ -386,7 +386,7 @@ package core.app.core.serialization
 			
 			if ( task.type == null && task.deserializeFunc == null )
 			{
-				throw( new Error( "Unkown type" ) );
+				throw( new Error( "Unknown type" ) );
 			}
 			
 			// Determine if this item has a custom serializer
