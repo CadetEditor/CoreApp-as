@@ -31,7 +31,7 @@ package core.app.util
 		{
 			var obj:Object = { type:type };
 			return array.filter( 
-			function( item:*, index:int, array:Array ):Boolean 
+			function( item:*, index:int, arr:Array ):Boolean 
 			{ 
 				return item is type; 
 			}
@@ -42,7 +42,7 @@ package core.app.util
 		{
 			var obj:Object = { types:types };
 			return array.filter( 
-			function( item:*, index:int, array:Array):Boolean 
+			function( item:*, index:int, arr:Array):Boolean 
 			{ 
 				for each ( var type:Class in types ) 
 				{ 

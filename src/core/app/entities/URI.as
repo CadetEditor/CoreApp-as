@@ -1915,9 +1915,9 @@ package core.app.entities
 				// Take the scheme from this URI and tack it on.  This is
 				// intended to make working with chdir() a little more
 				// tolerant.
-				var final:String = this.scheme + ":" + ref;
+				var finalUri:String = this.scheme + ":" + ref;
 				
-				return constructURI(final);
+				return constructURI(finalUri);
 			}
 			else if (ref.charAt(0) == "?")
 			{

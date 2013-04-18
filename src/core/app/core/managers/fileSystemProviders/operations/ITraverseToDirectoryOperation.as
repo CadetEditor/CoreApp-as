@@ -10,8 +10,11 @@
 
 package core.app.core.managers.fileSystemProviders.operations
 {
+	import core.app.entities.URI;
+
 	public interface ITraverseToDirectoryOperation extends IFileSystemProviderOperation
 	{
 		function get contents():Array
+		function get finalURI():URI
 	}
 }

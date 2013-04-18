@@ -201,7 +201,7 @@ package core.app.core.serialization
 			task.id = referenceID++;
 			markTable[ value ] = task.id;
 			
-			var properties:Vector.<String> 
+			var properties:Vector.<String>; 
 			if ( serializeType == "rawObject" )
 			{
 				properties = new Vector.<String>();
@@ -339,7 +339,8 @@ package core.app.core.serialization
 				description = describeType( value );
 				var type:String = String( description.@name );
 				type = type.substring( type.lastIndexOf( "<" )+1, type.length-1 ).replace( "::","." );
-				xml.@x::T = type
+				//xml.setNamespace( x );
+				xml.@x::T = type;
 				if ( task.propertyAlias ) xml.@x::name = task.propertyAlias;
 				xml.@x::id = task.id;
 				

@@ -8,6 +8,7 @@
 //
 // =================================================================================================
 
+//TODO: implement getDirectoryErrorHandler() as per local FSP
 package core.app.managers.fileSystemProviders.url
 {
 	import flash.events.Event;
@@ -21,10 +22,11 @@ package core.app.managers.fileSystemProviders.url
 	
 	public class TraverseToDirectoryOperation extends CompoundOperation implements ITraverseToDirectoryOperation
 	{
-		private var _uri				:URI;
-		private var _fileSystemProvider	:URLFileSystemProvider;
-		private var _baseURL			:String;
-		private var _fileExists			:Boolean = false;
+		private var _uri					:URI;
+		protected var _finalURI				:URI;
+		private var _fileSystemProvider		:URLFileSystemProvider;
+		private var _baseURL				:String;
+		private var _fileExists				:Boolean = false;
 		
 		private var directories				:Array;
 		private var _contents				:Array;
@@ -32,6 +34,7 @@ package core.app.managers.fileSystemProviders.url
 		public function TraverseToDirectoryOperation( uri:URI, fileSystemProvider:URLFileSystemProvider, baseURL:String )
 		{
 			_uri = uri;
+			_finalURI = uri;
 			_fileSystemProvider = fileSystemProvider;
 			_baseURL = baseURL;
 			
@@ -88,6 +91,11 @@ package core.app.managers.fileSystemProviders.url
 		public function get uri():URI
 		{
 			return _uri;
+		}
+		
+		public function get finalURI():URI
+		{
+			return _finalURI;
 		}
 		
 		public function get fileSystemProvider():IFileSystemProvider { return _fileSystemProvider; }

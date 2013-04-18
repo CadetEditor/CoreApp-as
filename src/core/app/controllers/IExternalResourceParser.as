@@ -18,6 +18,6 @@ package core.app.controllers
 	{
 		// Should create a resource for the input uri, and take care of adding it to the resource manager.
 		// It should return an array that contains (or will contain) all resources assocaited with this uri.
-		function parse( uri:URI, assetsURI:URI, resourceManager:ResourceManager, fileSystemProvider:IFileSystemProvider ):Array
+		function parse( uri:URI, assetsURI:URI, resourceManager:ResourceManager, fileSystemProvider:IFileSystemProvider ):Array;
 	}
 }

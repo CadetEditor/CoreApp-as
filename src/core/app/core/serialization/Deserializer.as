@@ -131,8 +131,8 @@ package core.app.core.serialization
 		private function update():void
 		{
 			// Comment out this try/catch to throw specific errors.
-			try
-			{
+//			try
+//			{
 				var start:int = getTimer();
 				while ( currentTask )
 				{
@@ -151,14 +151,14 @@ package core.app.core.serialization
 						return;
 					}
 				}
-			}
+/*			}
 			catch ( e:Error )
 			{
 				clearInterval(timeout);
 				working = false;
 				dispatchEvent( new ErrorEvent( ErrorEvent.ERROR, false, false, e.message ) );
 				return;
-			}
+			}*/
 			
 			clearInterval(timeout);
 			
@@ -311,7 +311,11 @@ package core.app.core.serialization
 					if ( xml.localName() == "Ref" )
 					{
 						task.deserializeFunc = deserializeRef;
-					}
+					} 
+//					else if ( xml.localName() == "Vector" ) {
+//						task.type = Class( getDefinitionByName( "Vector.<" + xml.@x::T + ">" ) ); 
+//						task.deserializeFunc = deserializeInBuiltType;
+//					}
 					else
 					{
 						task.deserializeFunc = deserializeInBuiltType;

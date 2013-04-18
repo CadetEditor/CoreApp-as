@@ -52,14 +52,14 @@ package core.app.core.serialization
 			var prefix:String = xml.@prefix;
 			if ( prefix == null )
 			{
-				throw( new Error( "Missing 'prefix' attribute for manifest xml : " + xml.toXMLString() ) )
+				throw( new Error( "Missing 'prefix' attribute for manifest xml : " + xml.toXMLString() ) );
 				return;
 			}
 			
 			var url:String = xml.@url;
 			if ( url == null )
 			{
-				throw( new Error( "Missing 'url' attribute for manifest xml : " + xml.toXMLString() ) )
+				throw( new Error( "Missing 'url' attribute for manifest xml : " + xml.toXMLString() ) );
 				return;
 			}
 			
@@ -74,18 +74,18 @@ package core.app.core.serialization
 				classMap.name = classMapNode.@name;
 				if ( classMap.name == null )
 				{
-					throw( new Error( "Missing 'name' attribute for classMap node : " + classMapNode.toXMLString() ) )
+					throw( new Error( "Missing 'name' attribute for classMap node : " + classMapNode.toXMLString() ) );
 					continue;
 				}
 				
 				try
 				{
-					classMap.classPath = classMapNode.attribute("class")
+					classMap.classPath = classMapNode.attribute("class");
 					classMap.type = Class(getDefinitionByName( classMap.classPath ));
 				}
 				catch (e:Error)
 				{
-					trace("Warning : Could not find class for classMap node : " + classMapNode.toXMLString() )
+					trace("Warning : Could not find class for classMap node : " + classMapNode.toXMLString() );
 					trace("Attempting to deserialize XML containing this class will fail")
 					continue;
 				}

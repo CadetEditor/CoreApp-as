@@ -17,7 +17,7 @@ package core.app.util
 	
 	public class IntrospectionUtil
 	{
-		static private const descriptionCache		:Dictionary = new Dictionary();;
+		static private const descriptionCache		:Dictionary = new Dictionary();
 		
 		/**
 		 * Returns the fully qualified class path for an object.
