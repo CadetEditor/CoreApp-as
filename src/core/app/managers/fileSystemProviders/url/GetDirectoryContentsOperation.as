@@ -19,15 +19,11 @@ package core.app.managers.fileSystemProviders.url
 	import flash.net.URLLoader;
 	import flash.net.URLLoaderDataFormat;
 	import flash.net.URLRequest;
-	import flash.utils.ByteArray;
 	
 	import core.app.core.managers.fileSystemProviders.IFileSystemProvider;
 	import core.app.core.managers.fileSystemProviders.operations.IGetDirectoryContentsOperation;
-	import core.app.core.managers.fileSystemProviders.operations.IReadFileOperation;
 	import core.app.entities.URI;
-	import core.app.events.FileSystemErrorCodes;
 	import core.app.events.OperationProgressEvent;
-	import core.app.util.StringUtil;
 
 	internal class GetDirectoryContentsOperation extends EventDispatcher implements IGetDirectoryContentsOperation
 	{
@@ -36,6 +32,7 @@ package core.app.managers.fileSystemProviders.url
 		private var _baseURL				:String;
 		
 		private var _contents				:Vector.<URI>;
+		private var _defaultContentsXMLURL	:String = "contents.xml";
 		
 		public function GetDirectoryContentsOperation( uri:URI, fileSystemProvider:URLFileSystemProvider, baseURL:String )
 		{
@@ -56,7 +53,7 @@ package core.app.managers.fileSystemProviders.url
 				url = url + "/";
 			}
 			
-			var request:URLRequest = new URLRequest( url + "_contents.xml" );
+			var request:URLRequest = new URLRequest( url + _defaultContentsXMLURL );
 			request.contentType = URLLoaderDataFormat.TEXT;
 			loader.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
 			loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, errorHandler);
@@ -67,7 +64,7 @@ package core.app.managers.fileSystemProviders.url
 		
 		private function errorHandler( event:ErrorEvent ):void
 		{
-			// Failed to find _contents.xml, assume directory is empty.
+			// Failed to find contents.xml, assume directory is empty.
 			_contents = new Vector.<URI>();
 			dispatchEvent( new Event( Event.COMPLETE ) );
 		}
