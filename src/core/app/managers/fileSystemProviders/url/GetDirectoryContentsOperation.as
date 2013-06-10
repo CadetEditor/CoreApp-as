@@ -32,7 +32,7 @@ package core.app.managers.fileSystemProviders.url
 		private var _baseURL				:String;
 		
 		private var _contents				:Vector.<URI>;
-		private var _defaultContentsXMLURL	:String = "contents.xml";
+		private var _defaultContentsXMLURL	:String = "_contents.xml";
 		
 		public function GetDirectoryContentsOperation( uri:URI, fileSystemProvider:URLFileSystemProvider, baseURL:String )
 		{
