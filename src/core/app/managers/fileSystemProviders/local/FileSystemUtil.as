@@ -37,6 +37,7 @@ package core.app.managers.fileSystemProviders.local
 		{
 			var uriPath:String = file.nativePath.replace(rootDirectory.nativePath, "");
 			if ( uriPath.charAt( 0 ) == "\\" ) uriPath = uriPath.substr(1);
+			if ( uriPath.charAt( 0 ) == "/" ) uriPath = uriPath.substr(1);
 			uriPath = StringUtil.replaceAll(uriPath, "\\", "/" );
 			if ( file.isDirectory ) uriPath += "/";
 			

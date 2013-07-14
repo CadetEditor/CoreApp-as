@@ -28,7 +28,7 @@ package core.app.operations
 		private var _label			:String = "Change Property";
 		
 		public function ChangePropertyOperation(object:Object, propertyName:String, newValue:*, oldValue:* = null)
-		{
+		{			
 			this.object = object
 			this.propertyName = propertyName
 			this.newValue = newValue;
