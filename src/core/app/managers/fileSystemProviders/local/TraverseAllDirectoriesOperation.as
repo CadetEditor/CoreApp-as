@@ -10,16 +10,13 @@
 
 package core.app.managers.fileSystemProviders.local
 {
-	import flash.events.ErrorEvent;
 	import flash.events.Event;
 	import flash.filesystem.File;
 	
 	import core.app.core.managers.fileSystemProviders.IFileSystemProvider;
 	import core.app.core.managers.fileSystemProviders.operations.ITraverseAllDirectoriesOperation;
 	import core.app.entities.URI;
-	import core.app.events.OperationProgressEvent;
 	import core.app.operations.CompoundOperation;
-	import core.app.util.AsynchronousUtil;
 	
 	public class TraverseAllDirectoriesOperation extends CompoundOperation implements ITraverseAllDirectoriesOperation
 	{

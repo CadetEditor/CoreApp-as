@@ -13,6 +13,8 @@
     <classEntry path="core.app.events.CollectionValidatorEvent"/>
     <classEntry path="core.app.operations.SerializeOperation"/>
     <classEntry path="core.app.util.SerializationUtil"/>
+    <classEntry path="core.app.core.managers.fileSystemProviders.IMemoryFileSystemProvider"/>
+    <classEntry path="core.app.util.FileSystemTypes"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
