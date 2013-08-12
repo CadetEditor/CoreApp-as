@@ -51,7 +51,8 @@ package core.app.managers.fileSystemProviders.local
 		override public function execute():void
 		{
 			//var file:File = new File( uriToFilePath(uri) );
-			var file:File = new File( FileSystemUtil.uriToFilePath( _uri, _rootDirectory ) );
+			var filePath:String = FileSystemUtil.uriToFilePath( _uri, _rootDirectory );
+			var file:File = new File( filePath );
 			if ( file.exists )
 			{
 				fileStream = new FileStream();
@@ -64,7 +65,7 @@ package core.app.managers.fileSystemProviders.local
 			// Error - file does not exist
 			else
 			{
-				AsynchronousUtil.dispatchLater( this, new ErrorEvent( ErrorEvent.ERROR, false, false, "", FileSystemErrorCodes.FILE_DOES_NOT_EXIST ) );
+				AsynchronousUtil.dispatchLater( this, new ErrorEvent( ErrorEvent.ERROR, false, false, "Local ReadFileOperation Error: File Not Found \""+filePath+"\"", FileSystemErrorCodes.FILE_DOES_NOT_EXIST ) );
 			}
 		}
 		

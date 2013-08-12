@@ -26,11 +26,14 @@ package core.app.managers.fileSystemProviders.local
 			var localURI:URI = uri.subpath(1);
 			if ( localURI.path == "" || localURI.path == "/" ) return rootDirectory.nativePath;
 			// If the root directory path is already present in the localURI, don't add it again at the end.
+			var localPath:String = localURI.path;
 			var rootPath:String = rootDirectory.url;
 			rootPath = rootPath.replace("file://", "");
-			var index:int = localURI.path.indexOf(rootPath); 
-			if ( index != -1 ) return localURI.path;
-			return rootDirectory.nativePath + "/" + localURI.path;
+			var index:int = localPath.indexOf(rootPath); 
+			if ( index != -1 ) return localPath;
+			if ( localPath.charAt( 0 ) == "/" ) localPath = localPath.substr(1);
+			
+			return rootDirectory.nativePath + "/" + localPath;
 		}
 		
 		public static function fileToURI( file:File, rootDirectory:File, fileSystemProviderID:String ):URI
@@ -42,7 +45,8 @@ package core.app.managers.fileSystemProviders.local
 			if ( file.isDirectory ) uriPath += "/";
 			
 			var resultPath:String = fileSystemProviderID + "/"; // Prepend FileSystemProvider's id to uri
-			if (uriPath != "/")	resultPath += uriPath;	
+			if (uriPath != "/")	resultPath += uriPath;
+			
 			return new URI( resultPath );
 		}		
 	}
