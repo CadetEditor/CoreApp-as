@@ -12,6 +12,6 @@ package core.app.core.managers.fileSystemProviders.operations
 {
 	public interface ITraverseAllDirectoriesOperation extends IFileSystemProviderOperation
 	{
-		function get contents():Array
+		function get contents():Array;
 	}
 }

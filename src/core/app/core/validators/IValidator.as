@@ -16,7 +16,7 @@ package core.app.core.validators
 	
 	public interface IValidator extends IEventDispatcher
 	{
-		function dispose():void
-		function get state():Boolean
+		function dispose():void;
+		function get state():Boolean;
 	}
 }

@@ -21,6 +21,6 @@ package core.app.core.managers.fileSystemProviders.operations
 	public interface IFileSystemProviderOperation extends IAsynchronousOperation
 	{
 		function get uri():URI;
-		function get fileSystemProvider():IFileSystemProvider
+		function get fileSystemProvider():IFileSystemProvider;
 	}
 }

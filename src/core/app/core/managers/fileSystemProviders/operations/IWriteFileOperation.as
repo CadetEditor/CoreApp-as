@@ -14,6 +14,6 @@ package core.app.core.managers.fileSystemProviders.operations
 	
 	public interface IWriteFileOperation extends IFileSystemProviderOperation
 	{
-		function get bytes():ByteArray
+		function get bytes():ByteArray;
 	}
 }

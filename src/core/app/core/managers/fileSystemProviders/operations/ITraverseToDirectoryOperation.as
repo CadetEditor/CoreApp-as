@@ -14,7 +14,7 @@ package core.app.core.managers.fileSystemProviders.operations
 
 	public interface ITraverseToDirectoryOperation extends IFileSystemProviderOperation
 	{
-		function get contents():Array
-		function get finalURI():URI
+		function get contents():Array;
+		function get finalURI():URI;
 	}
 }

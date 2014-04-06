@@ -12,6 +12,6 @@ package core.app.core.managers.fileSystemProviders.operations
 {
 	public interface IDoesFileExistOperation extends IFileSystemProviderOperation
 	{
-		function get fileExists():Boolean
+		function get fileExists():Boolean;
 	}
 }

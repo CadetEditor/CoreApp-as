@@ -27,16 +27,15 @@ package core.app.core.managers.fileSystemProviders
 	
 	public interface IFileSystemProvider extends IEventDispatcher
 	{
-		function createDirectory(uri:URI):ICreateDirectoryOperation
-		function deleteFile(uri:URI):IDeleteFileOperation
-		function doesFileExist(uri:URI):IDoesFileExistOperation
-		function getDirectoryContents(uri:URI):IGetDirectoryContentsOperation
-		function readFile(uri:URI):IReadFileOperation
-		function traverseToDirectory(uri:URI):ITraverseToDirectoryOperation
-		function traverseAllDirectories(uri:URI):ITraverseAllDirectoriesOperation
-		function writeFile(uri:URI, data:ByteArray):IWriteFileOperation
-			
-		function get id():String
-		function get label():String
+		function createDirectory(uri:URI):ICreateDirectoryOperation;
+		function deleteFile(uri:URI):IDeleteFileOperation;
+		function doesFileExist(uri:URI):IDoesFileExistOperation;
+		function getDirectoryContents(uri:URI):IGetDirectoryContentsOperation;
+		function readFile(uri:URI):IReadFileOperation;
+		function traverseToDirectory(uri:URI):ITraverseToDirectoryOperation;
+		function traverseAllDirectories(uri:URI):ITraverseAllDirectoriesOperation;
+		function writeFile(uri:URI, data:ByteArray):IWriteFileOperation;
+		function get id():String;
+		function get label():String;
 	}
 }

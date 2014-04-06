@@ -4,7 +4,7 @@ package core.app.core.managers.fileSystemProviders
 
 	public interface ILocalFileSystemProvider extends IFileSystemProvider
 	{
-		function get rootDirectoryURI():URI
-		function get defaultDirectoryURI():URI
+		function get rootDirectoryURI():URI;
+		function get defaultDirectoryURI():URI;
 	}
 }

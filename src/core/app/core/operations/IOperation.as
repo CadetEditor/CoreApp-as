@@ -12,7 +12,7 @@ package core.app.core.operations
 {
 	public interface IOperation
 	{
-		function execute():void
-		function get label():String
+		function execute():void;
+		function get label():String;
 	}
 }

@@ -15,9 +15,9 @@ package core.app.core.managers.fileSystemProviders
 	
 	public interface IMultiFileSystemProvider extends IFileSystemProvider
 	{
-		function registerFileSystemProvider( provider:IFileSystemProvider, visible:Boolean = true ):void
+		function registerFileSystemProvider( provider:IFileSystemProvider, visible:Boolean = true ):void;
 		function get fileSystem():FileSystemNode;
 		
-		function getFileSystemProviderForURI( uri:URI ):IFileSystemProvider
+		function getFileSystemProviderForURI( uri:URI ):IFileSystemProvider;
 	}
 }

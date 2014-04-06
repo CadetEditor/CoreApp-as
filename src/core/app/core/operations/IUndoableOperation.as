@@ -14,6 +14,6 @@ package core.app.core.operations
 
 	public interface IUndoableOperation extends IOperation
 	{
-		function undo():void
+		function undo():void;
 	}
 }
