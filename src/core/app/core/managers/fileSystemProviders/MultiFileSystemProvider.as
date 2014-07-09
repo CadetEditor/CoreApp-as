@@ -70,6 +70,20 @@ package core.app.core.managers.fileSystemProviders
 			return getProviderForURI(uri);
 		}
 		
+		private function getProviderForURI(uri:URI):IFileSystemProvider
+		{
+			var split:Array = uri.path.split("/");
+			var providerID:String = split[0];
+			var provider:IFileSystemProvider = providers[providerID];
+			if ( provider == null )
+			{
+				//throw( new Error( "Cannot map uri to provider. " + uri.path ) );
+				return null;
+			}
+			
+			return providers[providerID];
+		}
+		
 		
 		public function createDirectory(uri:URI):ICreateDirectoryOperation
 		{
@@ -133,19 +147,6 @@ package core.app.core.managers.fileSystemProviders
 			var operation:IWriteFileOperation = provider.writeFile(uri, data);
 			operation.addEventListener( ErrorEvent.ERROR, errorHandler, false, 0, true );
 			return operation;
-		}
-		
-		
-		private function getProviderForURI(uri:URI):IFileSystemProvider
-		{
-			var split:Array = uri.path.split("/");
-			var providerID:String = split[0];
-			var provider:IFileSystemProvider = providers[providerID];
-			if ( provider == null )
-			{
-				throw( new Error( "Cannot map uri to provider. " + uri.path ) );
-			}
-			return providers[providerID];
 		}
 		
 		//Why listen into the MultiFileSystemProvider rather than the Operation for errors?
